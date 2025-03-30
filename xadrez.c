@@ -14,6 +14,7 @@
 void moverBispo(int casas);
 void moverTorre(int casas);
 void moverRainha(int casas);
+void moverCavalo(int casas);
 int lerEntrada(const char* mensagem);
 
 int main() {
@@ -24,6 +25,7 @@ int main() {
     int bispo_casas = lerEntrada("Bispo (movimento diagonal): ");
     int torre_casas = lerEntrada("Torre (movimento horizontal): ");
     int rainha_casas = lerEntrada("Rainha (movimento horizontal): ");
+    int cavalo_casas = lerEntrada("Cavalo (quantidade de movimentos em L): ");
 
     // Movimento do Bispo (usando for)
     printf("\nTESTE DO BISPO:\n");
@@ -37,7 +39,39 @@ int main() {
     printf("\nTESTE DA RAINHA:\n");
     moverRainha(rainha_casas);
     
+    // Movimento do Cavalo (usando loops aninhados)
+    printf("\nTESTE DO CAVALO:\n");
+    moverCavalo(cavalo_casas);
+    
     return 0;
+}
+
+/**
+ * Move o Cavalo em L (para baixo e esquerda)
+ * @param casas Quantidade de movimentos em L a executar
+ * Implementado com loops aninhados (for + while)
+ */
+void moverCavalo(int casas) {
+    printf("Movimento em L (%d casas):\n", casas);
+    
+    for (int movimento = 1; movimento <= casas; movimento++) {
+        printf("Movimento %d: ", movimento);
+        
+        // Primeira parte do L (2 casas para baixo)
+        int casas_baixo = 0;
+        while (casas_baixo < 2) {
+            printf("%s", BAIXO);
+            casas_baixo++;
+            if (casas_baixo < 2) printf(" + ");
+        }
+        
+        printf(" + ");
+        
+        // Segunda parte do L (1 casa para esquerda)
+        printf("%s", ESQUERDA);
+        
+        printf("\n");
+    }
 }
 
 /**
