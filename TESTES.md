@@ -15,36 +15,30 @@
 === SISTEMA DE TESTE DE MOVIMENTACAO - MATECHECK ===
 
 Digite o numero de casas para cada peça:
-Bispo (movimento diagonal): 5
-Torre (movimento horizontal): 5
-Rainha (movimento horizontal): 8
+Bispo (movimento diagonal): 2
+Torre (movimento horizontal): 3
+Rainha (movimento horizontal): 1
+Cavalo (quantidade de movimentos em L): 2
 
 TESTE DO BISPO:
-Movimento diagonal superior direita (5 casas):
+Movimento diagonal superior direita (2 casas):
 Casa 1: Cima + Direita
 Casa 2: Cima + Direita
-Casa 3: Cima + Direita
-Casa 4: Cima + Direita
-Casa 5: Cima + Direita
 
 TESTE DA TORRE:
-Movimento para direita (5 casas):
+Movimento para direita (3 casas):
 Casa 1: Direita
 Casa 2: Direita
 Casa 3: Direita
-Casa 4: Direita
-Casa 5: Direita
 
 TESTE DA RAINHA:
-Movimento para esquerda (8 casas):
+Movimento para esquerda (1 casas):
 Casa 1: Esquerda
-Casa 2: Esquerda
-Casa 3: Esquerda
-Casa 4: Esquerda
-Casa 5: Esquerda
-Casa 6: Esquerda
-Casa 7: Esquerda
-Casa 8: Esquerda
+
+TESTE DO CAVALO:
+Movimento em L (2 casas):
+Movimento 1: Baixo + Baixo + Esquerda
+Movimento 2: Baixo + Baixo + Esquerda
 ```
 
 ### Cenário 2: Entradas Inválidas
